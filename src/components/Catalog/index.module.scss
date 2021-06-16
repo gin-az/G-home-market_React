@@ -1,0 +1,69 @@
+.catalog {
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px 0px;
+  flex-wrap: wrap;
+}
+
+.name {
+  box-sizing: border-box;
+  color: #323232;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+}
+
+.price {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 24px;
+  justify-content: center;
+  height: 20px;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+  color: #545454;
+}
+
+.il {
+  position: absolute;
+  width: 26px;
+  height: 28px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px 8px 0;
+  right: 8px;
+  top: 8px;
+  all: none;
+}
+
+.lba {
+  height: 26px;
+  width: 38px;
+  background: transparent;
+  border: none;
+  background-image: url("./../../img/favorite.svg");
+  background-repeat: no-repeat;
+  transition: background-image 0.25s ease;
+  padding-left: 0;
+}
+
+.ilb {
+  background: transparent;
+  background-image: url("./../../img/favorite_border.svg");
+  background-repeat: no-repeat;
+  border: none;
+  height: 24px;
+  width: 24px;
+  transition: background-image 0.25s ease;
+  &:focus {
+    height: 26px;
+    width: 38px;
+    background-image: url("./../../img/favorite.svg");
+    background-repeat: no-repeat;
+  }
+}
