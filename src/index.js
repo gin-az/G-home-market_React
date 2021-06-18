@@ -7,7 +7,7 @@ const name = "Pety"
 const active = []
 
 ReactDOM.render(
-  <App name={name} active={active}/>,
-  document.getElementById('root')
+    <App name={name} active={active}/>,
+    document.getElementById('root')
 );
 

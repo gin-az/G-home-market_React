@@ -1,5 +1,7 @@
 import React from "react";
 import {Wrap} from "./components/wrap/Wrap";
+import {Catalog} from "./components/Catalog/Catalog";
+import {Menu} from "./components/Menu/Menu";
 
 class App extends React.Component {
   update = () => {
@@ -7,9 +9,10 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
-        <Wrap update={this.update}/>
-      </div>
+        <div className="App">
+          <Menu />
+          <Catalog />
+        </div>
     );
   }
 }
