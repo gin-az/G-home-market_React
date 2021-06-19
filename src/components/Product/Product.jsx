@@ -1,40 +1,35 @@
 import React, {Component} from "react";
 import s from "./index.module.scss";
 
+export const Product = ({item, ...props}) => {
 
-export class Product extends Component{
-
-    imgPath = (path) => {
+    const imgPath = (path) => {
         const baseUrl = 'http://localhost:3007'
         return (
-            baseUrl+path
+            baseUrl + path
         )
     }
 
-    render() {
-        return (
-            <>
+    return (
+        <>
+            <div>
+                <img src={imgPath(item.picture.path)} alt="{this.props.item.picture.alt}"/>
+            </div>
+            <div>
+                <h3>{item.name}</h3>
+                <p>
+                    {item.description}
+                </p>
+                <h4>Details</h4>
+                <p>{item.details}</p>
                 <div>
-                    <img src={this.imgPath(this.props.item.picture.path)} alt="{this.props.item.picture.alt}" />
-                </div>
-                <div>
-                    <h3>{this.props.item.name}</h3>
-                    <p>
-                        {this.props.item.description}
-                    </p>
-                    <h4>Details</h4>
-                    <p>{this.props.item.details}</p>
                     <div>
-                        <div>
-                            <span>{this.props.item.price.currency}{this.props.item.price.value}</span>
-                        </div>
+                        <span>{item.price.currency}{item.price.value}</span>
                     </div>
                 </div>
-
-
-                <button onClick={this.props.onExit}>Back</button>
-
-            </>
-        )
-    }
+            </div>
+            <button onClick={props.onExit}>Back</button>
+        </>
+    )
 }
+
